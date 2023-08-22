@@ -8,6 +8,13 @@ public class ContaTerminal {
 
         System.out.println("Insira seu nome");
         String nomeCliente = sc.nextLine();
+
+        System.out.println("Insira sua idade");
+        int idadeCliente = sc.nextInt();
+
+        if(idadeCliente < 18){
+            throw new RuntimeException("Desculpe " + nomeCliente + ", mas apenas maiores de 18 anos podem criar uma conta na DIO Bank!");
+        }
         
         System.out.println("Por favor, digite o número da Agência !");
         int numeroAgencia = sc.nextInt();
